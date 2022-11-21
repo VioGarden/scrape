@@ -12,7 +12,7 @@ micro = now.microsecond
 def url_to_txt(url, filename=f"test.html", save=False):
     """
     input : url from google sheets
-    output : html of google sheets link
+    output : html/text of google sheets link
     """
     r = requests.get(url)
     if r.status_code == 200:
@@ -52,7 +52,7 @@ def find_raw_link(html_text):
         z = ""
     return z
 
-print(find_raw_link(html_text))
+json_link = find_raw_link(html_text)
 
 
 
